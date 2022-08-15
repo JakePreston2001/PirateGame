@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BA5BC3B2-8A37-DB1C-740A-4549C2928D81}</ProjectGuid>
+    <ProjectGuid>{0658773C-97AB-F51B-8991-5EC830C7A4F9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,17 +66,13 @@
     <Compile Include="Assets\Scripts\shoot.cs" />
     <Compile Include="Assets\Scripts\BelowWaterCannonBall.cs" />
     <Compile Include="Assets\Scripts\PlaneGeneration.cs" />
+    <Compile Include="Assets\Scripts\WaterRippleCamera.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Shaders\My Lighting.cginc" />
-    <None Include="Assets\Shader\Waves.shader" />
-    <None Include="Assets\Shaders\My Lightmapping.cginc" />
-    <None Include="Assets\Shader\gerstner2.shader" />
-    <None Include="Assets\Shaders\My Lighting Input.cginc" />
-    <None Include="Assets\Shaders\My Shadows.cginc" />
-    <None Include="Assets\Shaders\Flat Wireframe Shader.shader" />
-    <None Include="Assets\Shader\My Lighting New.cginc" />
-    <None Include="Assets\Shaders\MyFlatWireframe.cginc" />
+    <None Include="Assets\Shaders\Waves.shader" />
+    <None Include="Assets\Shaders\StylizedWater 1.shader" />
+    <None Include="Assets\Shaders\StylizedWater.shader" />
+    <None Include="Assets\Shaders\WaterRipples.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -24,9 +24,14 @@ public class waveManager : MonoBehaviour
         Waves = new Wave[4];
         for (int i = 0; i < Waves.Length; i++)
         {
+            /*
             Waves[0] = new Wave(0.22f, 60, new Vector2(0.37f,0.21f));
             Waves[1] = new Wave(0.18f, 30, new Vector2(0.6f,0.01f));
             Waves[2] = new Wave(0.08f, 15, new Vector2(1f,0f));
+            */
+            Waves[0] = new Wave(0.22f, 300, new Vector2(0.37f, 0.21f));
+            Waves[1] = new Wave(0.18f, 150, new Vector2(0.6f, 0.01f));
+            Waves[2] = new Wave(0.08f, 75, new Vector2(1f, 0f));
         }
     }
     private void Update()
