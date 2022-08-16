@@ -65,8 +65,9 @@
     <Compile Include="Assets\Scripts\bonusPhysics.cs" />
     <Compile Include="Assets\Scripts\shoot.cs" />
     <Compile Include="Assets\Scripts\BelowWaterCannonBall.cs" />
-    <Compile Include="Assets\Scripts\PlaneGeneration.cs" />
     <Compile Include="Assets\Scripts\WaterRippleCamera.cs" />
+    <Compile Include="Assets\Scripts\PlaneGeneration.cs" />
+    <Compile Include="Assets\Scripts\WaterController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Waves.shader" />

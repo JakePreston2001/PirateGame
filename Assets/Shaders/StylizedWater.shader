@@ -126,16 +126,18 @@
 
             void vert(inout appdata_full vertexData)
             {
-                float3 gridPoint = vertexData.vertex.xyz;
+                float4 gridPoint = mul(unity_ObjectToWorld,vertexData.vertex);
                 float3 tangent = float3(1, 0, 0);
                 float3 binormal = float3(0, 0, 1);
                 float3 p = gridPoint;
                 p += gerstnerWave(_WaveA, gridPoint, tangent, binormal);
                 p += gerstnerWave(_WaveB, gridPoint, tangent, binormal);
                 p += gerstnerWave(_WaveC, gridPoint, tangent, binormal);
+                gridPoint.xyz = p;
+
                 float3 normal = normalize(cross(binormal, tangent));
 
-                vertexData.vertex.xyz = p;
+                vertexData.vertex = mul(unity_WorldToObject, gridPoint);
                 vertexData.normal = normal;
 
             }

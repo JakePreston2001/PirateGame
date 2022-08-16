@@ -7,10 +7,13 @@ using UnityEngine;
 
 public class waterManager : MonoBehaviour
 {
+
+
     private MeshFilter meshFilter;
 
     private void Awake()
     {
+        
         meshFilter = GetComponent<MeshFilter>();
     }
 

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4996504416093050200}
   cam: {fileID: 0}
-  sails: {fileID: 7258395908751682801}
+  sails: {fileID: 4417034217179799937}
   rudder: {fileID: 7258395908751682801}
   steerPower: 2
   speed: 45

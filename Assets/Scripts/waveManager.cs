@@ -6,12 +6,15 @@ public class waveManager : MonoBehaviour
 {
 
     public static waveManager instance;
-    [SerializeField] Wave[] Waves;
+    Wave[] Waves;
     private float offset;
     [SerializeField] private float speed;
 
+    //WaterController waterController;
+
     private void Awake()
     {
+        
         if (instance == null)
         {
             instance = this;
@@ -21,22 +24,22 @@ public class waveManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object");
             Destroy(this);
         }
-        Waves = new Wave[4];
-        for (int i = 0; i < Waves.Length; i++)
-        {
-            /*
-            Waves[0] = new Wave(0.22f, 60, new Vector2(0.37f,0.21f));
-            Waves[1] = new Wave(0.18f, 30, new Vector2(0.6f,0.01f));
-            Waves[2] = new Wave(0.08f, 15, new Vector2(1f,0f));
-            */
-            Waves[0] = new Wave(0.22f, 300, new Vector2(0.37f, 0.21f));
-            Waves[1] = new Wave(0.18f, 150, new Vector2(0.6f, 0.01f));
-            Waves[2] = new Wave(0.08f, 75, new Vector2(1f, 0f));
-        }
+        
+        Waves = new Wave[3];
+        /*
+        Waves[0] = new Wave(WaterController.instance.WaveA.z, WaterController.instance.WaveA.w, new Vector2(WaterController.instance.WaveA.x, WaterController.instance.WaveA.y));
+        Waves[1] = new Wave(WaterController.instance.WaveB.z, WaterController.instance.WaveB.w, new Vector2(WaterController.instance.WaveB.x, WaterController.instance.WaveB.y));
+        Waves[2] = new Wave(WaterController.instance.WaveC.z, WaterController.instance.WaveC.w, new Vector2(WaterController.instance.WaveC.x, WaterController.instance.WaveC.y));
+        */
+
     }
     private void Update()
     {
         offset += Time.deltaTime * speed;
+        Waves[0] = new Wave(WaterController.instance.WaveA.z, WaterController.instance.WaveA.w, new Vector2(WaterController.instance.WaveA.x, WaterController.instance.WaveA.y));
+        Waves[1] = new Wave(WaterController.instance.WaveB.z, WaterController.instance.WaveB.w, new Vector2(WaterController.instance.WaveB.x, WaterController.instance.WaveB.y));
+        Waves[2] = new Wave(WaterController.instance.WaveC.z, WaterController.instance.WaveC.w, new Vector2(WaterController.instance.WaveC.x, WaterController.instance.WaveC.y));
+
     }
 
     internal float GetWaveHeight(float x, float z)

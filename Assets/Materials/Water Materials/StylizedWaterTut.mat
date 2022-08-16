@@ -115,7 +115,7 @@ Material:
     - _FogColor: {r: 0.049172327, g: 0.66215104, b: 0.8018868, a: 1}
     - _IntersectionColor: {r: 0, g: 1, b: 0.59222054, a: 0}
     - _NormalPanningSpeeds: {r: 0, g: 0, b: 0.05, a: 0.05}
-    - _WaveA: {r: 0.37, g: 0.21, b: 0.22, a: 300}
-    - _WaveB: {r: 0.6, g: 0.15, b: 0.15, a: 150}
-    - _WaveC: {r: 1, g: 0, b: 0.08, a: 75}
+    - _WaveA: {r: 0.17, g: 0.17, b: 0.22, a: 300}
+    - _WaveB: {r: 0.095, g: 0.01, b: 0.28, a: 150}
+    - _WaveC: {r: 0.6, g: 0.46, b: 0.31, a: 75}
   m_BuildTextureStacks: []
